@@ -28,76 +28,10 @@ export default function Menu() {
         <li>
           <NavLink
             activeClassName="is-active"
-            exact
-            to="/settings">
-            <span className="icon is-small">
-              <i className="fa fa-cog"></i>
-            </span> Settings
-          </NavLink>
-        </li>
-        <li>
-          <a>
-            <span className="icon is-small">
-              <i className="fa fa-users"></i>
-            </span> Manage Your Team
-          </a>
-          <ul>
-            <li>
-              <NavLink
-                activeClassName="is-active"
-                exact
-                to="/users">Members
-              </NavLink>
-            </li>
-            <li>
-              <NavLink
-                activeClassName="is-active"
-                to="/users/add">
-                Add a member
-              </NavLink>
-            </li>
-          </ul>
-        </li>
-        <li>
-          <NavLink
-            activeClassName="is-active"
             to="/posts">
             <span className="icon is-small">
               <i className="fa fa-table"></i>
             </span> Posts
-          </NavLink>
-        </li>
-      </ul>
-      <p className="menu-label">
-        COMPONENTS
-      </p>
-      <ul className="menu-list">
-        <li>
-          <NavLink
-            activeClassName="is-active"
-            to="/form">
-            Form
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            activeClassName="is-active"
-            to="/tiles">
-            Tiles
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            activeClassName="is-active"
-            to="/buttons">
-            Buttons
-          </NavLink>
-        </li>
-        <li>
-          <NavLink
-            activeClassName="is-active"
-            to="/carousel">
-            Carousel
           </NavLink>
         </li>
       </ul>

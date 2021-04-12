@@ -34,6 +34,7 @@ export default function Login() {
                 <input
                   className="input is-medium"
                   maxLength={20}
+                  name="username"
                   pattern={NAME_RULE.rule}
                   required
                   type="text"
@@ -48,6 +49,7 @@ export default function Login() {
                 <input
                   className="input is-medium"
                   maxLength={20}
+                  name="password"
                   pattern={PASSWORD_RULE.rule}
                   required
                   type="password"

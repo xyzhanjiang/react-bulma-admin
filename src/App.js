@@ -5,7 +5,6 @@ import {
   Route,
   Redirect
 } from 'react-router-dom'
-import { ReactQueryConfigProvider } from 'react-query'
 
 import auth from './common/auth'
 import Index from './views/index'
@@ -15,11 +14,6 @@ import About from './views/about'
 
 // 由于所有页面都有 footer, 就放在 Router 之外了
 import Footer from './components/footer'
-
-// 阻止 react-query 激活刷新
-const queryConfig = { queries: { refetchOnWindowFocus: false } }
-
-console.log("test merge branch")
 
 // 未认证跳转登录页
 function PrivateRoute({ children, ...rest }) {
@@ -41,28 +35,26 @@ function PrivateRoute({ children, ...rest }) {
 
 export default function App() {
   return (
-    <ReactQueryConfigProvider config={queryConfig}>
-      <div className="wrapper">
-        <main className="main">
-          <Router>
-            <Switch>
-              <Route path="/register">
-                <Register/>
-              </Route>
-              <Route path="/login">
-                <Login/>
-              </Route>
-              <Route path="/about">
-                <About/>
-              </Route>
-              <PrivateRoute path="/">
-                <Index/>
-              </PrivateRoute>
-            </Switch>
-          </Router>
-        </main>
-        <Footer/>
-      </div>
-    </ReactQueryConfigProvider>
+    <div className="wrapper">
+      <main className="main">
+        <Router>
+          <Switch>
+            <Route path="/register">
+              <Register/>
+            </Route>
+            <Route path="/login">
+              <Login/>
+            </Route>
+            <Route path="/about">
+              <About/>
+            </Route>
+            <PrivateRoute path="/">
+              <Index/>
+            </PrivateRoute>
+          </Switch>
+        </Router>
+      </main>
+      <Footer/>
+    </div>
   )
 }
