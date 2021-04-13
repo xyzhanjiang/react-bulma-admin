@@ -6,9 +6,10 @@ Experimental, [demo](https://xyzhanjiang.github.io/react-bulma-admin/)
 
 * React
 * React-router
-* [Mobx](https://github.com/mobxjs/mobx)
+* [MobX](https://github.com/mobxjs/mobx)
 * [Bulma](https://github.com/jgthms/bulma)
 * [BulmaTemplates](https://github.com/BulmaTemplates/bulma-templates)
+* [Bulmaswatch](https://github.com/jenil/bulmaswatch)
 
 ## Install
 
@@ -42,8 +43,8 @@ bulma-admin
 |- /public
   |- index.html  // home page
 |- /src
-  |- app.tsx      // the main application component
-  |- index.tsx    // the entry point file for the application
+  |- app.js      // the main application component
+  |- index.js    // the entry point file for the application
   |- /common
   |- /components
   |- /config
@@ -52,9 +53,9 @@ bulma-admin
   |- /images
   |- /store      // redux store
   |- /views      // page views
-    |- about.tsx // about page
-    |- index.tsx // index page
-    |- login.tsx // login page
+    |- about.js  // about page
+    |- index.js  // index page
+    |- login.js  // login page
 ```
 
 ## Browser support

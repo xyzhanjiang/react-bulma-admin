@@ -126,7 +126,7 @@ export default observer(() => {
                 </p>
                 <p className="control">
                   <button
-                    className="button is-link"
+                    className="button is-primary"
                     onClick={onSearch}>Search</button>
                 </p>
               </div>
@@ -135,7 +135,7 @@ export default observer(() => {
 
           <div className="level-right">
             <p className="level-item">
-              <Link className="button is-link" to="/posts/add">New</Link>
+              <Link className="button is-primary" to="/posts/add">New</Link>
             </p>
           </div>
         </nav>
@@ -195,7 +195,7 @@ export default observer(() => {
                           e.preventDefault()
                           del(item)
                         }}
-                        className="button is-small is-link"
+                        className="button is-small is-danger"
                         href="#">
                         <span className="icon is-small">
                           <i className="fa fa-times"></i>

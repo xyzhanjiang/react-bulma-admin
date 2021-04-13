@@ -9,7 +9,7 @@
 }
 
 .app-login {
-  color: $grey-dark;
+  color: #4a4a4a;
 }
 
 @media (min-width: 769px) {
@@ -29,7 +29,7 @@
 }
 
 .app-login-description {
-  color: $grey-light;
+  color: #b5b5b5;
   font-size: 1.15rem;
   margin: 1rem 0;
 }
@@ -110,7 +110,7 @@
 }
 
 .app-loading-item {
-  color: $link;
+  color: #333;
   text-indent: -99999em;
   position: relative;
   width: 10em;

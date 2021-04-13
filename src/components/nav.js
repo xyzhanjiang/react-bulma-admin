@@ -3,6 +3,8 @@ import { NavLink, Link, useHistory } from 'react-router-dom'
 
 import auth from '../common/auth'
 import logo from '../images/logo.png'
+import { themes } from '../config'
+import { changeTheme } from '../common/util'
 
 export default function Nav() {
   const [isNavbarShown, setNavbarShown] = React.useState(false)
@@ -47,6 +49,35 @@ export default function Nav() {
             to="/about">
             About
           </Link>
+          <div className="navbar-item has-dropdown is-hoverable">
+            <a className="navbar-link">
+              Themes
+            </a>
+            <div className="navbar-dropdown is-boxed">
+              <div className="columns">
+                <div className="column">
+                  {themes.slice(0, themes.length / 2).map(theme => {
+                    return <a className="navbar-item" href="#" key={theme}
+                      onClick={(e) => {
+                        e.preventDefault()
+                        changeTheme(theme)
+                      }}
+                      style={{ textTransform: 'capitalize' }}> {theme} </a>
+                  })}
+                </div>
+                <div className="column">
+                  {themes.slice(themes.length / 2).map(theme => {
+                    return <a className="navbar-item" href="#" key={theme}
+                      onClick={(e) => {
+                        e.preventDefault()
+                        changeTheme(theme)
+                      }}
+                      style={{ textTransform: 'capitalize' }}> {theme} </a>
+                  })}
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <div className="navbar-end">
           <div className="navbar-item has-dropdown is-hoverable">
